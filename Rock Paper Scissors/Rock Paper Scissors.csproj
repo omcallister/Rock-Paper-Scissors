@@ -51,6 +51,7 @@
     <Compile Include="Roshambo.cs" />
     <Compile Include="run.cs" />
     <Compile Include="userplayer.cs" />
+    <Compile Include="validator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

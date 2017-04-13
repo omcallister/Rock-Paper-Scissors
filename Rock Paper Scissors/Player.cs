@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Rock_Paper_Scissors
 {
-    class Player
+    interface IPlayer
     {
+        string GetName();
+        void SetName(string n);
+        string GenerateRoshambo();
     }
 }
