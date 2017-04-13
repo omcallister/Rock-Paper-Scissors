@@ -14,9 +14,7 @@ namespace Rock_Paper_Scissors
 
         public string GenerateRoshambo()
         {
-            /*Console.WriteLine("");
-            string userInput = Console.ReadLine();
-            userInput = response;*/
+
             return response;
 
         }
@@ -28,11 +26,13 @@ namespace Rock_Paper_Scissors
         {
             name = n;
         }
-        public static int UserPick()
+        public static string UserPick()
         {
+           
             Roshambo u = new Roshambo();
-            int input = int.Parse(u.GetRoshambo());
-            return input;
+            int input = int.Parse(Console.ReadLine());          
+            
+            return u.GetRoshambo(input);
         }  
     }
 }

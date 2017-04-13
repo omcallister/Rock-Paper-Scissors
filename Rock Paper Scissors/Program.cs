@@ -11,7 +11,7 @@ namespace Rock_Paper_Scissors
         static void Main(string[] args)
         {
             string input;
-
+            string userAction;
             Random rando = new Random();
             Roshambo r = new Roshambo();
 
@@ -21,15 +21,32 @@ namespace Rock_Paper_Scissors
 
             if (input == "rocky")
             {
-                UserPlayer.UserPick();
-
+                Console.WriteLine("enter 1 for Rock, 2 for Paper, and 3 for Scissors");
+                userAction = UserPlayer.UserPick();
+                Console.WriteLine($"You threw {userAction}!");
                 IPlayer p = new RockPlayer("Rocky");
-                Console.WriteLine(p.GetName() + " throws out " + p.GenerateRoshambo());
+                Console.WriteLine(p.GetName() + " throws out rock" );
+
+                switch (a)
+                {
+                    case 1:
+                        switch (userAction)
+                        {
+                            case 1:
+                                Console.WriteLine($"You threw {userAction}!");
+                                Console.WriteLine(p.GetName() + " throws out rock");
+                                Console.WriteLine("you win!");
+                                break;
+                        }
+                }
                 
             }
             else if (input == "sasha")
             {
-                IPlayer p2 = new RandPlayer("Vicky", rando);
+                Console.WriteLine("enter 1 for Rock, 2 for Paper, and 3 for Scissors");
+                userAction = UserPlayer.UserPick();
+                Console.WriteLine($"You threw {userAction}!");
+                IPlayer p2 = new RandPlayer("Sasha", rando);
                 Console.WriteLine(p2.GetName() + " throws out " + p2.GenerateRoshambo());
                 rando.Next();
             }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rock_Paper_Scissors
 {
-    class Roshambo
+    public class Roshambo
     {
         private List<string> rosh;
         public Roshambo()
@@ -18,7 +18,7 @@ namespace Rock_Paper_Scissors
         }
         public string GetRoshambo(int index)
         {
-            string ro = rosh[index];
+            string ro = rosh[index - 1];
             return ro;
         }
 
